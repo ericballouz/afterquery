@@ -1,0 +1,44 @@
+find jobs -maxdepth 1 -type d -name 'test*' -exec rm -rf {} +
+
+python debug.py > output.log &
+
+subl output.log
+
+timeout=20
+elapsed=0
+while [ -z "$(find jobs/test_trial1_call0 -name '*trajectory.json')" ] && [ $elapsed -lt $timeout ]; do
+    sleep 2
+    elapsed=$((elapsed + 2))
+done
+
+subl "$(find jobs/test_trial1_call0 -name '*trajectory.json')"
+
+elapsed=0
+while [ -z "$(find jobs/test_trial1_call1 -name '*trajectory.json')" ] && [ $elapsed -lt $timeout ]; do
+    sleep 2
+    elapsed=$((elapsed + 2))
+done
+
+subl "$(find jobs/test_trial1_call0 -name '*trajectory.json')"
+subl "$(find jobs/test_trial1_call1 -name '*trajectory.json')"
+
+elapsed=0
+while [ -z "$(find jobs/test_trial1_call2 -name '*trajectory.json')" ] && [ $elapsed -lt $timeout ]; do
+    sleep 2
+    elapsed=$((elapsed + 2))
+done
+
+subl "$(find jobs/test_trial1_call0 -name '*trajectory.json')"
+subl "$(find jobs/test_trial1_call1 -name '*trajectory.json')"
+subl "$(find jobs/test_trial1_call2 -name '*trajectory.json')"
+
+elapsed=0
+while [ -z "$(find jobs/test_trial1_call3 -name '*trajectory.json')" ] && [ $elapsed -lt $timeout ]; do
+    sleep 2
+    elapsed=$((elapsed + 2))
+done
+
+subl "$(find jobs/test_trial1_call0 -name '*trajectory.json')"
+subl "$(find jobs/test_trial1_call1 -name '*trajectory.json')"
+subl "$(find jobs/test_trial1_call2 -name '*trajectory.json')"
+subl "$(find jobs/test_trial1_call3 -name '*trajectory.json')"

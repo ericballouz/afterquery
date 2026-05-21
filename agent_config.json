@@ -1,0 +1,8 @@
+{
+  "max_steps": 50,
+  "system_prompt": " You're a problem solver. If prompted for them, write terminal commands in between command tags <cmd> ... </cmd>. Any patches should be in this format: <cmd> echo \"[modified_code]\" > [filename] </cmd> ",
+  "messages": [
+    "Inspect the repo structure"
+  ],
+  "job_name": "test_trial4_call0"
+}

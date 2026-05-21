@@ -1,0 +1,9 @@
+ollama pull mistral
+harbor run \
+  -d terminal-bench@2.0 \
+  --agent-import-path agent:MyAgent \
+  -m ollama/mistral \
+  -i large-scale-text-editing \
+  -i largest-eigenval \
+  --n-concurrent 1 \
+  --job-name $1 
