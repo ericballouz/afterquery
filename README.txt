@@ -5,3 +5,7 @@ agent_config.json → Shared configuration between env and agent
 custom_launch   → Harbor launch script
 jobs/           → Harbor outputs and trajectories
 requirements.txt → Requirements file, run 'pip install -r requirements.txt'
+
+to run the RL process:
+chmod +x launch
+./launch

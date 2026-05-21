@@ -1,0 +1,4 @@
+find jobs -maxdepth 1 -type d -name 'test*' -exec rm -rf {} +
+
+python train.py > output.log &
+

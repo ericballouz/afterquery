@@ -2,23 +2,22 @@ Using cpu device
 Wrapping the env with a `Monitor` wrapper
 Wrapping the env in a DummyVecEnv.
 Job name: test_trial1_call0
-  2/2 Mean: 0.500 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 0:01:02 0:00:00
+  2/2 Mean: 0.000 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 0:00:48 0:00:00
 terminal-bench • my_agent • mistral
 ┏━━━━━━━━┳━━━━━━━━━━━━┳━━━━━━━┓
 ┃ Trials ┃ Exceptions ┃  Mean ┃
 ┡━━━━━━━━╇━━━━━━━━━━━━╇━━━━━━━┩
-│      2 │          0 │ 0.500 │
+│      2 │          0 │ 0.000 │
 └────────┴────────────┴───────┘
 
 ┏━━━━━━━━┳━━━━━━━┓
 ┃ Reward ┃ Count ┃
 ┡━━━━━━━━╇━━━━━━━┩
-│ 1.0    │     1 │
-│ 0.0    │     1 │
+│ 0.0    │     2 │
 └────────┴───────┘
 
 Job Info
-Total runtime: 1m 2s
+Total runtime: 48s
 Results written to jobs/test_trial1_call0/result.json
 Inspect results by running `harbor view jobs`
 Share results by running `harbor upload jobs/test_trial1_call0`
@@ -27,162 +26,5 @@ result.stdout: None
 result.stderr:CompletedProcess(args=['bash', 'custom_launch', 'test_trial1_call0'], returncode=0)
 result.json found. Reading...
 Number of guiding prompts:1. Total Steps: 2
-Success! Reward: 0.98. Guiding prompts: ['Check if modifications improved the performance'].
-State: [1.         0.83333333 0.025      0.001     ]
-Job name: test_trial2_call0
-  2/2 Mean: 0.000 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 0:00:44 0:00:00
-terminal-bench • my_agent • mistral
-┏━━━━━━━━┳━━━━━━━━━━━━┳━━━━━━━┓
-┃ Trials ┃ Exceptions ┃  Mean ┃
-┡━━━━━━━━╇━━━━━━━━━━━━╇━━━━━━━┩
-│      2 │          0 │ 0.000 │
-└────────┴────────────┴───────┘
-
-┏━━━━━━━━┳━━━━━━━┓
-┃ Reward ┃ Count ┃
-┡━━━━━━━━╇━━━━━━━┩
-│ 0.0    │     2 │
-└────────┴───────┘
-
-Job Info
-Total runtime: 44s
-Results written to jobs/test_trial2_call0/result.json
-Inspect results by running `harbor view jobs`
-Share results by running `harbor upload jobs/test_trial2_call0`
-
-result.stdout: None
-result.stderr:CompletedProcess(args=['bash', 'custom_launch', 'test_trial2_call0'], returncode=0)
-result.json found. Reading...
-Number of guiding prompts:1. Total Steps: 2
-State: [0.    0.    0.025 0.001]
-Job name: test_trial2_call1
-  2/2 Mean: 0.000 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 0:02:25 0:00:00
-terminal-bench • my_agent • mistral
-┏━━━━━━━━┳━━━━━━━━━━━━┳━━━━━━━┓
-┃ Trials ┃ Exceptions ┃  Mean ┃
-┡━━━━━━━━╇━━━━━━━━━━━━╇━━━━━━━┩
-│      2 │          0 │ 0.000 │
-└────────┴────────────┴───────┘
-
-┏━━━━━━━━┳━━━━━━━┓
-┃ Reward ┃ Count ┃
-┡━━━━━━━━╇━━━━━━━┩
-│ 0.0    │     2 │
-└────────┴───────┘
-
-Job Info
-Total runtime: 2m 25s
-Results written to jobs/test_trial2_call1/result.json
-Inspect results by running `harbor view jobs`
-Share results by running `harbor upload jobs/test_trial2_call1`
-
-result.stdout: None
-result.stderr:CompletedProcess(args=['bash', 'custom_launch', 'test_trial2_call1'], returncode=0)
-result.json found. Reading...
-Number of guiding prompts:2. Total Steps: 34
-State: [0.         0.16666667 0.05       0.017     ]
-Job name: test_trial2_call2
-  2/2 Mean: 0.000 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 0:21:09 0:00:00
-terminal-bench • my_agent • mistral
-┏━━━━━━━━┳━━━━━━━━━━━━┳━━━━━━━┓
-┃ Trials ┃ Exceptions ┃  Mean ┃
-┡━━━━━━━━╇━━━━━━━━━━━━╇━━━━━━━┩
-│      2 │          1 │ 0.000 │
-└────────┴────────────┴───────┘
-
-┏━━━━━━━━┳━━━━━━━┓
-┃ Reward ┃ Count ┃
-┡━━━━━━━━╇━━━━━━━┩
-│ 0.0    │     2 │
-└────────┴───────┘
-
-┏━━━━━━━━━━━━━━━━━━━┳━━━━━━━┓
-┃ Exception         ┃ Count ┃
-┡━━━━━━━━━━━━━━━━━━━╇━━━━━━━┩
-│ AgentTimeoutError │     1 │
-└───────────────────┴───────┘
-
-Job Info
-Total runtime: 21m 9s
-Results written to jobs/test_trial2_call2/result.json
-Inspect results by running `harbor view jobs`
-Share results by running `harbor upload jobs/test_trial2_call2`
-
-result.stdout: None
-result.stderr:CompletedProcess(args=['bash', 'custom_launch', 'test_trial2_call2'], returncode=0)
-result.json found. Reading...
-Number of guiding prompts:3. Total Steps: 80
-State: [0.    0.    0.075 0.04 ]
-Job name: test_trial2_call3
-  2/2 Mean: 0.500 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 0:23:39 0:00:00
-terminal-bench • my_agent • mistral
-┏━━━━━━━━┳━━━━━━━━━━━━┳━━━━━━━┓
-┃ Trials ┃ Exceptions ┃  Mean ┃
-┡━━━━━━━━╇━━━━━━━━━━━━╇━━━━━━━┩
-│      2 │          1 │ 0.500 │
-└────────┴────────────┴───────┘
-
-┏━━━━━━━━┳━━━━━━━┓
-┃ Reward ┃ Count ┃
-┡━━━━━━━━╇━━━━━━━┩
-│ 1.0    │     1 │
-│ 0.0    │     1 │
-└────────┴───────┘
-
-┏━━━━━━━━━━━━━━━━━━━┳━━━━━━━┓
-┃ Exception         ┃ Count ┃
-┡━━━━━━━━━━━━━━━━━━━╇━━━━━━━┩
-│ AgentTimeoutError │     1 │
-└───────────────────┴───────┘
-
-Job Info
-Total runtime: 23m 39s
-Results written to jobs/test_trial2_call3/result.json
-Inspect results by running `harbor view jobs`
-Share results by running `harbor upload jobs/test_trial2_call3`
-
-result.stdout: None
-result.stderr:CompletedProcess(args=['bash', 'custom_launch', 'test_trial2_call3'], returncode=0)
-result.json found. Reading...
-Number of guiding prompts:4. Total Steps: 225
-Success! Reward: -1.25. Guiding prompts: ['Inspect the repo structure', 'Read test and validation files, then formulate a first step', 'Inspect the repo structure', 'Propose a code modification. Modifications to files should be in the format <cmd> echo "[modified_code]" > [filename] </cmd>" '].
-State: [1.     0.5    0.1    0.1125]
----------------------------------
-| rollout/           |          |
-|    ep_len_mean     | 2.5      |
-|    ep_rew_mean     | -0.715   |
-| time/              |          |
-|    fps             | 0        |
-|    iterations      | 1        |
-|    time_elapsed    | 2953     |
-|    total_timesteps | 5        |
----------------------------------
-TESTING LEARNED POLICY
-Job name: test_trial4_call0
-  2/2 Mean: 0.000 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 0:00:43 0:00:00
-terminal-bench • my_agent • mistral
-┏━━━━━━━━┳━━━━━━━━━━━━┳━━━━━━━┓
-┃ Trials ┃ Exceptions ┃  Mean ┃
-┡━━━━━━━━╇━━━━━━━━━━━━╇━━━━━━━┩
-│      2 │          0 │ 0.000 │
-└────────┴────────────┴───────┘
-
-┏━━━━━━━━┳━━━━━━━┓
-┃ Reward ┃ Count ┃
-┡━━━━━━━━╇━━━━━━━┩
-│ 0.0    │     2 │
-└────────┴───────┘
-
-Job Info
-Total runtime: 43s
-Results written to jobs/test_trial4_call0/result.json
-Inspect results by running `harbor view jobs`
-Share results by running `harbor upload jobs/test_trial4_call0`
-
-result.stdout: None
-result.stderr:CompletedProcess(args=['bash', 'custom_launch', 'test_trial4_call0'], returncode=0)
-result.json found. Reading...
-Number of guiding prompts:1. Total Steps: 2
-State: [0.    0.    0.025 0.001]
--0.02
-Reward: -0.02
+State: [0.         0.33333333 0.025      0.001     ]
+Job name: test_trial1_call1
